@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+    <script>
+        function specificChampion(){
+            var el = document.getElementById("champion");
+            if (el.checked)
+                document.getElementById("specific_champion").disabled = false;
+            else
+            document.getElementById("specific_champion").disabled = true;
+        }
+
+        function specificRole(){
+            var el = document.getElementById("role");
+            if (el.checked)
+                document.getElementById("specific_role").disabled = false;
+            else
+            document.getElementById("specific_role").disabled = true;
+        }
+    </script>
+<head>
+    <title>LoL Role Models</title>
+</head>
+<body>
+    <form action="/results">
+        <fieldset>
+            <legend>Find my Role Models!</legend>
+                <label for="region">Select your server:</label><br><br>
+                <select id="region" name="region">
+                    <option value="br">BR</option>
+                    <option value="eun">EUNE</option>
+                    <option value="euw">EUW</option>
+                    <option value="jp">JP</option>
+                    <option value="kr">KR</option>
+                    <option value="la1">LAN</option>
+                    <option value="la2">LAS</option>
+                    <option value="na">NA</option>
+                    <option value="oce">OCE</option>
+                    <option value="tr">TR</option>
+                    <option value="ru">RU</option>
+                </select><br><br>
+
+                <label for="summoner">Enter Your Summoner Name:</label><br><br>
+
+
+                <input type="text" id="summoner" name="summoner_name" value="Enter Summoner Name"><br><br>
+
+                <fieldset>
+                    <legend>Champion Mains</legend>
+                <input type="radio" id="any_champion" name="champion" value = "any_champion" onchange="specificChampion();"/>
+                <label for="main">Recommend mains of any champion.</label><br><br>
+
+
+                <input type="radio" id="my_champion" name="champion" value = "my_champion" onchange="specificChampion();"/>
+                <label for="main">Only recommend mains of the same champion as me.</label><br><br>
+
+                <input type="radio" id="champion" name="champion" value="specific_champion" onchange="specificChampion();"/>
+                <label for="champion">Look for mains of a specific champion.</label><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                <label for="specific_champion">Champion:</label><br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select id="specific_champion" name="specific_champion" disabled="disabled">
+                    <option value="aatrox">Aatrox</option>
+                        <option value="ahri">Ahri</option>
+                        <option value="akali">Akali</option>
+                        <option value="alistar">Alistar</option>
+                        <option value="amumu">Amumu</option>
+                        <option value="anivia">Anivia</option>
+                        <option value="annie">Annie</option>
+                        <option value="aphelios">Aphelios</option>
+                        <option value="ashe">Ashe</option>
+                        <option value="aurelion sol">Aurelion Sol</option>
+                        <option value="azir">Azir</option>
+                        <option value="bard">Bard</option>
+                        <option value="blitzcrank">Blitzcrank</option>
+                        <option value="brand">Brand</option>
+                        <option value="braum">Braum</option>
+                        <option value="caitlyn">Caitlyn</option>
+                        <option value="camille">Camille</option>
+                        <option value="Cassiopeia">Cassiopeia</option>
+                        <option value="chogath">Cho'Gath</option>
+                        <option value="corki">Corki</option>
+                        <option value="darius">Darius</option>
+                        <option value="diana">Diana</option>
+                        <option value="draven">Draven</option>
+                        <option value="dr mundo">Dr. Mundo</option>
+                        <option value="ekko">Ekko</option>
+                        <option value="elise">Elise</option>
+                        <option value="evelyn">Evelynn</option>
+                        <option value="ezreal">Ezreal</option>
+                        <option value="fiddlesticks">Fiddlesticks</option>
+                        <option value="fiora">Fiora</option>
+                        <option value="fizz">Fizz</option>
+                        <option value="galio">Galio</option>
+                        <option value="gangplank">Gangplank</option>
+                        <option value="garen">Garen</option>
+                        <option value="gnar">Gnar</option>
+                        <option value="gragas">Gragas</option>
+                        <option value="graves">Graves</option>
+                        <option value="hecarim">Hecarim</option>
+                        <option value="heimerdinger">Heimerdinger</option>
+                        <option value="illaoi">Illaoi</option>
+                        <option value="irelia">Irelia</option>
+                        <option value="ivern">Ivern</option>
+                        <option value="janna">Janna</option>
+                        <option value="jarvan iv">Jarvan IV</option>
+                        <option value="jax">Jax</option>
+                        <option value="jayce">Jayce</option>
+                        <option value="jhin">Jhin</option>
+                        <option value="jinx">Jinx</option>
+                        <option value="kaisa">Kai'Sa</option>
+                        <option value="kalista">Kalista</option>
+                        <option value="karma">Karma</option>
+                        <option value="karthus">Karthus</option>
+                        <option value="kassadin">Kassadin</option>
+                        <option value="katarina">Katarina</option>
+                        <option value="kayle">Kayle</option>
+                        <option value="kayn">Kayn</option>
+                        <option value="kennen">Kennen</option>
+                        <option value="khazix">Kha'Zix</option>
+                        <option value="kindred">Kindred</option>
+                        <option value="kled">Kled</option>
+                        <option value="kogmaw">Kog'Maw</option>
+                        <option value="leblanc">LeBlanc</option>
+                        <option value="lee sin">Lee Sin</option>
+                        <option value="leona">Leona</option>
+                        <option value="lillia">Lillia</option>
+                        <option value="lissandra">Lissandra</option>
+                        <option value="lucian">Lucian</option>
+                        <option value="lulu">Lulu</option>
+                        <option value="lux">Lux</option>
+                        <option value="malphite">Malphite</option>
+                        <option value="malzahar">Malzahar</option>
+                        <option value="maokai">Maokai</option>
+                        <option value="master yi">Master Yi</option>
+                        <option value="miss fortune">Miss Fortune</option>
+                        <option value="wukong">Wukong</option>
+                        <option value="mordekaiser">Mordekaiser</option>
+                        <option value="morgana">Morgana</option>
+                        <option value="nami">Nami</option>
+                        <option value="nasus">Nasus</option>
+                        <option value="nautilus">Nautilus</option>
+                        <option value="neeko">Neeko</option>
+                        <option value="nidalee">Nidalee</option>
+                        <option value="nocturn">Nocturne</option>
+                        <option value="nunu willump">Nunu & Willump</option>
+                        <option value="olaf">Olaf</option>
+                        <option value="orianna">Orianna</option>
+                        <option value="ornn">Ornn</option>
+                        <option value="pantheon">Pantheon</option>
+                        <option value="poppy">Poppy</option>
+                        <option value="pyke">Pyke</option>
+                        <option value="qiyana">Qiyana</option>
+                        <option value="quinn">Quinn</option>
+                        <option value="rakan">Rakan</option>
+                        <option value="rammus">Rammus</option>
+                        <option value="reksai">Rek'Sai</option>
+                        <option value="renekton">Renekton</option>
+                        <option value="rengar">Rengar</option>
+                        <option value="riven">Riven</option>
+                        <option value="rumble">Rumble</option>
+                        <option value="ryze">Ryze</option>
+                        <option value="sejuani">Sejuani</option>
+                        <option value="senna">Senna</option>
+                        <option value="sett">Sett</option>
+                        <option value="shaco">Shaco</option>
+                        <option value="shen">Shen</option>
+                        <option value="shyvana">Shyvana</option>
+                        <option value="singed">Singed</option>
+                        <option value="sion">Sion</option>
+                        <option value="sivir">Sivir</option>
+                        <option value="skarner">Skarner</option>
+                        <option value="sona">Sona</option>
+                        <option value="soraka">Soraka</option>
+                        <option value="swain">Swain</option>
+                        <option value="sylas">Sylas</option>
+                        <option value="syndra">Syndra</option>
+                        <option value="tahm kench">Tahm Kench</option>
+                        <option value="taliyah">Taliyah</option>
+                        <option value="talon">Talon</option>
+                        <option value="taric">Taric</option>
+                        <option value="teemo">Teemo</option>
+                        <option value="thresh">Thresh</option>
+                        <option value="tristana">Tristana</option>
+                        <option value="trundle">Trundle</option>
+                        <option value="tryndamere">Tryndamere</option>
+                        <option value="twisted fate">Twisted Fate</option>
+                        <option value="twitch">Twitch</option>
+                        <option value="udyr">Udyr</option>
+                        <option value="urgot">Urgot</option>
+                        <option value="varus">Varus</option>
+                        <option value="vayne">Vayne</option>
+                        <option value="veigar">Veigar</option>
+                        <option value="velkoz">Vel'Koz</option>
+                        <option value="vi">Vi</option>
+                        <option value="viktor">Viktor</option>
+                        <option value="vladimir">Vladimir</option>
+                        <option value="volibear">Volibear</option>
+                        <option value="warwick">Warwick</option>
+                        <option value="xayah">Xayah</option>
+                        <option value="xerath">Xerath</option>
+                        <option value="xin zhao">Xin Zhao</option>
+                        <option value="yasuo">Yasuo</option>
+                        <option value="yone">Yone</option>
+                        <option value="yorick">Yorick</option>
+                        <option value="yuumi">Yuumi</option>
+                        <option value="zac">Zac</option>
+                        <option value="zed">Zed</option>
+                        <option value="ziggs">Ziggs</option>
+                        <option value="zilean">Zilean</option>
+                        <option value="zoe">Zoe</option>
+                        <option value="zyra">Zyra</option>
+                </select>
+                
+            </fieldset>
+            <fieldset>
+                <legend>Role Mains</legend>
+
+                <input type="radio" id="any_role" name="role" value="any_role" onchange="specificRole();"/>
+                <label for="main">Recommend mains of any role.</label><br><br>
+
+
+                <input type="radio" id="my_role" name="role" value="my_role" onchange="specificRole();"/>
+                <label for="main">Only recommend mains of the same role as me.</label><br><br>
+
+                <input type="radio" id="role" name="role" value="specific_role" onchange="specificRole();"/>
+                <label for="main">Recommend mains of a specific role.</label><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                <label for="specific_role">Role:</label><br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select id="specific_role" name="specific_role" disabled="disabled">
+                    <option value="top">Top</option>
+                    <option value="jungle">Jungle</option>
+                    <option value="mid">Mid</option>
+                    <option value="bot_carry">Bot Carry</option>
+                    <option value="support">Support</option>
+                </select>
+            </fieldset>
+            <br><br><button type="submit">Find my Role Models!</button>
+
+        </fieldset>
+    </form>
+</body>
+</html>
