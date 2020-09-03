@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Your Role Models</title>
+    </head>
+    <body>
+        <p>Here are your role models, sorted by how similar their playstyle is to yours. You can use op.gg's recording function to watch their games and learn from them!</p><br><br>
+        <table>
+            <tr>
+            {% for key in recommendations['columns'] %}              
+                    <th style="text-align:left"> {{ key.title().replace("_", " ") if key != 'op_gg' else 'OP.GG' }} </th>
+            {% endfor %}
+            </tr>
+            {% for values in recommendations['data'] %}
+                <tr>
+                    {% for value in values %}
+                    <td> {{ value }} </td>
+                    {% endfor %}
+               </tr>
+            {% endfor %}
+            </table>
+
+    </body>
+
+</html>

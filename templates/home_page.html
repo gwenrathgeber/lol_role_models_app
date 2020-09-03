@@ -16,12 +16,19 @@
             else
             document.getElementById("specific_role").disabled = true;
         }
+
+        function loadingScreen(){
+            document.getElementById("form").style.display = "none";
+            document.getElementById("loading").style.display = "block";
+            document.getElementById("loading_text").style.display = "block";
+
+        }
     </script>
 <head>
     <title>LoL Role Models</title>
 </head>
 <body>
-    <form action="/results">
+    <form action="/results" id="form">
         <fieldset>
             <legend>Find my Role Models!</legend>
                 <label for="region">Select your server:</label><br><br>
@@ -226,16 +233,18 @@
 
                 <label for="specific_role">Role:</label><br><br>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select id="specific_role" name="specific_role" disabled="disabled">
-                    <option value="top">Top</option>
-                    <option value="jungle">Jungle</option>
-                    <option value="mid">Mid</option>
-                    <option value="bot_carry">Bot Carry</option>
-                    <option value="support">Support</option>
+                    <option value="Top">Top</option>
+                    <option value="Jungle">Jungle</option>
+                    <option value="Mid">Mid</option>
+                    <option value="Bot_Carry">Bot Carry</option>
+                    <option value="Support">Support</option>
                 </select>
             </fieldset>
-            <br><br><button type="submit">Find my Role Models!</button>
+            <br><br><button type="submit" onclick="loadingScreen();" >Find my Role Models!</button>
 
         </fieldset>
     </form>
+    <img id="loading" src='../static/loading.gif' style='display:none'>
+    <p id="loading_text" style='display:none'>Begging Rito for your data, this may take 2-3 minutes...</p>
 </body>
 </html>
