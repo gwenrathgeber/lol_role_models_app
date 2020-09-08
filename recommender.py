@@ -26,6 +26,8 @@ def recommend(player_data, options):
 
     results = role_models
 
+    print(options)
+
     if options['champion'] == 'any_champion' and options['role'] == 'any_role':
         results = results.sort_values('similarity')
 

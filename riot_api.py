@@ -266,15 +266,16 @@ def process(summoner_account, region):
     matches = []
     timelines = []
 
-    for match in match_hist.json()['matches']:
+    for i, match in enumerate(match_hist.json()['matches']):
         match, timeline = get_match(match['gameId'], region_base_url_dict[region])
         if match.status_code == 200 and timeline.status_code == 200:
             matches.append(match.json())
             timelines.append(timeline.json())
         else:
             print(f'Match error code: {match.status_code}\nTimeline error code: {timeline.status_code}\n', file=sys.stderr)
-        time.sleep(config.sleep_time*2)
-
+        time.sleep(.05)
+        if i % 100 == 0 and i != 0:
+            time.sleep(120)
 
     matches, timelines = remove_short_games(matches, timelines)
 
