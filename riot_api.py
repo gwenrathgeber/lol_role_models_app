@@ -274,7 +274,7 @@ def process(summoner_account, region):
         else:
             print(f'Match error code: {match.status_code}\nTimeline error code: {timeline.status_code}\n', file=sys.stderr)
         time.sleep(.05)
-        if i % 100 == 0 and i != 0:
+        if i % 50 == 0 and i != 0:
             time.sleep(120)
 
     matches, timelines = remove_short_games(matches, timelines)
