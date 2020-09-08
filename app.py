@@ -38,8 +38,6 @@ def results():
 
     filter_options = {'champion':champion,'role':role}
 
-    print(filter_options)
-
     summoner_account = riot.get_summoner_by_name(config.region_base_url_dict[region], summoner_name)
 
     if summoner_account.status_code != 200:
